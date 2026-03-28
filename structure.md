@@ -1,0 +1,21 @@
+rwanda-firm-activity/
+│
+├── data/
+│   ├── raw/
+│   ├── processed/
+│
+├── src/
+│   ├── download_data.py
+│   ├── preprocess.py
+│   ├── analysis.py
+│
+├── notebooks/
+│   ├── exploration.ipynb
+│
+├── outputs/
+│   ├── maps/
+│   ├── tables/
+│
+├── requirements.txt
+├── structure.md
+├── README.md
