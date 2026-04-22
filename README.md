@@ -10,7 +10,7 @@
 
 ## Introduction
 
-This project constructs a spatially explicit, time‑varying measure of commercial informality in Kigali, Rwanda. By combining **OpenStreetMap (OSM)** – which is a biased and incomplete map of formal businesses – with **VIIRS nightlights** and **Sentinel‑2 NDBI** (built‑up index), once can infer areas where economic activity is high but formal firm representation is low. The output is a 500m grid‑level panel dataset (2015–2024) containing satellite‑derived economic intensity, OSM firm counts, expected firm counts (using Poisson regression), and a coverage ratio. The informality signal is validated against the **World Bank Enterprise Survey** and a manual sample of grid cells. 
+This project constructs a spatially explicit, time‑varying measure of commercial informality in Kigali, Rwanda. It combines **OpenStreetMap (OSM, a biased and incomplete map of formal businesses) with **VIIRS nightlights** and **Sentinel‑2 NDBI** (built‑up index), once can infer areas where economic activity is high but formal firm representation is low. The output is a 500m grid‑level panel dataset (2015–2024) containing satellite‑derived economic intensity, OSM firm counts, expected firm counts (using Poisson regression), and a coverage ratio. The informality signal is validated against the **World Bank Enterprise Survey** and a manual sample of grid cells. 
 This work provides a low‑cost, replicable tool for monitoring commercial development hot nodes and targeting policy interventions in data‑poor urban environments.
 
 ---
@@ -28,6 +28,24 @@ This work provides a low‑cost, replicable tool for monitoring commercial devel
 - **Economic Geography:** Formal firms (licensed, larger, more visible) are more likely to appear in OSM. Informal firms (small vendors, home‑based workshops, unregistered small shops) are underrepresented.  
 - **Satellite Proxies:** VIIRS nightlights correlate with electricity consumption and nighttime economic activity. Sentinel‑2 NDBI (Normalized Difference Built‑up Index) captures daytime built‑up density. Together they can provide a signal of **total economic presence** independent of official registration.  
 - **Informality as a Residual:** In areas where satellite activity is high but OSM firm count is low, one can infer a larger informal sector presence. This is a spatial indicator, not an absolute count.
+
+---
+
+## Limitations to Document
+- **OSM Snapshot Bias:** I use a 2026 snapshot; OSM mapping effort has increased over time, so earlier years may artificially appear more informal.
+- **Resolution Mismatch:** VIIRS (~500m) is coarse; aggregating points and 10m NDBI to a 500m grid smooths fine‑grained variation.
+- **Nightlights Saturation:** VIIRS saturates in the brightest urban cores, potentially underestimating growth at the top end.
+- **No Complete Ground Truth:** Without a full census/survey, the informality residual is relative to the statistical expectation, not an absolute count.
+
+---
+
+## Policy Relevance
+1. This aligns with Kigali City Master Plan goals to:
+   1. Organize commercial activities.
+   2. Continue formalizing the private sector
+2. This can inform targeted business registration drives or infrastructure investments.
+3. This can help in future design of models which help in measuring the productivity outputs in the informal sector.
+4. It can provide a low‑cost informality monitoring tool for the Rwanda Development Board and City of Kigali.
 
 ---
 
