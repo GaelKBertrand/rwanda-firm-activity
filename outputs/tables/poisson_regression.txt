@@ -1,0 +1,18 @@
+                 Generalized Linear Model Regression Results                  
+==============================================================================
+Dep. Variable:         osm_firm_count   No. Observations:                 1600
+Model:                            GLM   Df Residuals:                     1597
+Model Family:                 Poisson   Df Model:                            2
+Link Function:                    Log   Scale:                          1.0000
+Method:                          IRLS   Log-Likelihood:                -2459.0
+Date:                Wed, 29 Apr 2026   Deviance:                       3923.6
+Time:                        13:52:23   Pearson chi2:                 6.56e+03
+No. Iterations:                     7   Pseudo R-squ. (CS):             0.9637
+Covariance Type:            nonrobust                                         
+===============================================================================
+                  coef    std err          z      P>|z|      [0.025      0.975]
+-------------------------------------------------------------------------------
+const          -1.1845      0.040    -29.265      0.000      -1.264      -1.105
+nightlights     0.0702      0.001     78.875      0.000       0.069       0.072
+ndbi            5.2469      0.212     24.781      0.000       4.832       5.662
+===============================================================================
